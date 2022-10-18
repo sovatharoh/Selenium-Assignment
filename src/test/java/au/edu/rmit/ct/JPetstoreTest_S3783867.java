@@ -206,19 +206,16 @@ class JPetstoreTest_S3783867 {
                 e.printStackTrace();
             }
         }
-        List<WebElement> lweTD2 = myDriver.findElements(By.tagName("td"));
-        System.out.println("Printing text from <td> elements:");
-        int i = 1;
-        for (WebElement wea : lweTD2){ // each of this are td WebElements
-            System.out.println(wea.getText());
-            System.out.println(i++);
+        List<WebElement> tdCheckout = myDriver.findElements(By.tagName("td"));
+        if(tdCheckout.get(3).getText().equals("false") || tdCheckout.get(11).equals("false") || tdCheckout.get(19).equals("false")) {
+            throw new Exception("No stock in product");
+        } else {
+            //CHECK IF Quanity is correct for each pet
+            assertEquals("3", myDriver.findElement(By.name("EST-21")).getAttribute("value"));
+            assertEquals("2", myDriver.findElement(By.name("EST-17")).getAttribute("value"));
+            assertEquals("1", myDriver.findElement(By.name("EST-13")).getAttribute("value"));
+            assertEquals("Sub Total: $221.37", tdCheckout.get(24).getText());
         }
-        System.out.println("VALUE");
-        System.out.println(myDriver.findElement(By.name("EST-21")).getAttribute("value"));
-        System.out.println(myDriver.findElement(By.name("EST-17")).getAttribute("value"));
-        System.out.println(myDriver.findElement(By.name("EST-13")).getAttribute("value"));
-        fail("TODO");
-
     }
 
     @Test
