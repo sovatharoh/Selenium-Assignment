@@ -9,11 +9,13 @@ package au.edu.rmit.ct;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 // Update this class name by replacing S3214321 with your student ID
-class TryBookingTest_S3214321 {
+class TryBookingTest_S3783867 {
     WebDriver myDriver;
 
 
@@ -25,7 +27,7 @@ class TryBookingTest_S3214321 {
         // When this passes I know I have the webdriver and Junit set up correctly
         String url = "https://www.trybooking.com";
         myDriver.get(url);
-        fail("Put my own sanity checks here.");
+        assertEquals("Event Ticketing & Booking Platform | TryBooking Australia", myDriver.getTitle());
     }
 
     @BeforeEach
