@@ -8,6 +8,7 @@
  * Could have simulated scroll down to select the wanted, but chose to select the option that was immediately seen.
  * Had to add sleep thread between each select click, implicit wait was unreliable.
  * The longer implicit waits, was to wait for the page to load which often took a long time.
+ * May need to increase the those times manually if the pages are not loading in time.
  */
 package au.edu.rmit.ct;
 
