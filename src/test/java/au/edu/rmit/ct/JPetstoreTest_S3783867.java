@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 // Update this class name by replacing S3214321 with your student ID
-class zJPetstoreTest_S3783867 {
+class JPetstoreTest_S3783867 {
     WebDriver myDriver;
 
     @Test
