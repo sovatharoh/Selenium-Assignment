@@ -3,8 +3,9 @@
  * Name: Sovatharo Huy
  * Student ID: s3783867
  *
- * Could not select input for the <select></select> tags directly because the display was set to none. Instead, simulated user clicks on
- * value. Could have simulated scroll down to select the wanted, but chose to select the option that was immediately seen.
+ * Could not select input for the <select></select> tags directly because the display was set to none and could not use the Select Package.
+ * Instead, simulated user clicks on value.
+ * Could have simulated scroll down to select the wanted, but chose to select the option that was immediately seen.
  * Had to add sleep thread between each select click, implicit wait was unreliable.
  * The longer implicit waits, was to wait for the page to load which often took a long time.
  */
@@ -14,7 +15,6 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashSet;
 import java.util.List;
